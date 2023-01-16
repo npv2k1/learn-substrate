@@ -42,6 +42,8 @@ sp-version = { version = "5.0.0", default-features = false, git = "https://githu
 ## custom pallet
 pallet-nicks = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", branch = "polkadot-v0.9.35" }
 
+pallet-contracts =  { version = "10.0.0", default-features = false }
+pallet-contracts-primitives = { version = "13.0.0", default_features = false }
 
 # Used for the node template's RPCs
 frame-system-rpc-runtime-api = { version = "4.0.0-dev", default-features = false, git = "https://github.com/paritytech/substrate.git", "branch" = "polkadot-v0.9.35" }
@@ -73,6 +75,8 @@ std = [
 	"pallet-aura/std",
 	"pallet-balances/std",
 	"pallet-nicks/std",
+	'pallet-contracts/std',
+    'pallet-contracts-primitives/std',
 	"pallet-grandpa/std",
 	"pallet-randomness-collective-flip/std",
 	"pallet-sudo/std",
