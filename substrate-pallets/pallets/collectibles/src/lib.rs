@@ -22,4 +22,22 @@ pub mod pallet {
 		#[pallet::constant]
 		type MaximumOwned: Get<u32>;
 	}
+	type BalanceOf<T> =
+		<<T as Config>::Currency as Currency<<T as frame_system::Config>::AccountId>>::Balance;
+
+	pub enum Color {
+		Red,
+		Yellow,
+		Blue,
+		Green,
+	}
+
+	pub struct Collectible<T: Config> {
+		// Unsigned integers of 16 bytes to represent a unique identifier
+		pub unique_id: [u8; 16],
+		// `None` assumes not for sale
+		pub price: Option<BalanceOf<T>>,
+		pub color: Color,
+		pub owner: T::AccountId,
+	}
 }
