@@ -3682,6 +3682,7 @@ dependencies = [
 name = "node-template-runtime"
 version = "4.0.0-dev"
 dependencies = [
+ "collectibles",
  "frame-benchmarking",
  "frame-executive",
  "frame-support",
